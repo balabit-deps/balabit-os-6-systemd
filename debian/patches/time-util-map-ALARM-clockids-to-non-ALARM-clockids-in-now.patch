@@ -1,0 +1,28 @@
+From: Lennart Poettering <lennart@poettering.net>
+Date: Fri, 12 Feb 2016 21:29:01 +0100
+Subject: time-util: map ALARM clockids to non-ALARM clockids in now()
+
+Fixes: #2597
+---
+ src/libsystemd/sd-event/sd-event.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/libsystemd/sd-event/sd-event.c b/src/libsystemd/sd-event/sd-event.c
+index deef6ba..2b46a1f 100644
+--- a/src/libsystemd/sd-event/sd-event.c
++++ b/src/libsystemd/sd-event/sd-event.c
+@@ -2780,9 +2780,13 @@ _public_ int sd_event_now(sd_event *e, clockid_t clock, uint64_t *usec) {
+                 *usec = e->timestamp.monotonic;
+                 break;
+ 
+-        default:
++        case CLOCK_BOOTTIME:
++        case CLOCK_BOOTTIME_ALARM:
+                 *usec = e->timestamp_boottime;
+                 break;
++
++        default:
++                assert_not_reached("Unknown clock?");
+         }
+ 
+         return 0;
