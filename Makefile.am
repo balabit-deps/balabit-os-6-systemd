@@ -1441,22 +1441,18 @@ tests += \
 	test-strbuf \
 	test-strv \
 	test-path \
-	test-path-util \
 	test-strxcpyx \
 	test-siphash24 \
 	test-unit-name \
 	test-unit-file \
 	test-utf8 \
 	test-ellipsize \
-	test-util \
 	test-string-util \
 	test-extract-word \
 	test-parse-util \
 	test-user-util \
 	test-hostname-util \
-	test-process-util \
 	test-terminal-util \
-	test-path-lookup \
 	test-barrier \
 	test-tmpfiles \
 	test-namespace \
@@ -1483,12 +1479,10 @@ tests += \
 	test-architecture \
 	test-socket-util \
 	test-fdset \
-	test-conf-files \
 	test-conf-parser \
 	test-capability \
 	test-async \
 	test-ratelimit \
-	test-condition \
 	test-uid-range \
 	test-bus-policy \
 	test-locale-util \
@@ -1502,7 +1496,6 @@ tests += \
 	test-arphrd-list \
 	test-dns-domain \
 	test-resolve-tables \
-	test-install-root \
 	test-rlimit-util \
 	test-signal-util
 
