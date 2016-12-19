@@ -1,16 +1,15 @@
-systemd (229-4ubuntu11bb2) xenial; urgency=medium
+systemd (229-4ubuntu11bb3) xenial; urgency=medium
 
   * Balabit patched version
 
  -- Balabit Platform Team <devnull@dev.null>  Mon, 19 Dec 2016 18:30:01 +0100
 
-<<<<<<< HEAD
 systemd (229-4ubuntu11bb1) UNRELEASED; urgency=medium
 
   * Balabit patched version
 
  -- Balabit Platform Team <devnull@dev.null>  Thu, 03 Nov 2016 16:41:06 +0100
-=======
+
 systemd (229-4ubuntu13) xenial; urgency=medium
 
   [ Martin Pitt ]
@@ -42,7 +41,6 @@ systemd (229-4ubuntu12) xenial; urgency=medium
     (LP: #1635256)
 
  -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 26 Oct 2016 13:18:42 +0200
->>>>>>> ubuntu
 
 systemd (229-4ubuntu11) xenial; urgency=medium
 
