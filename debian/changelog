@@ -1,3 +1,9 @@
+systemd (229-4ubuntu11bb2) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Mon, 19 Dec 2016 18:30:01 +0100
+
 <<<<<<< HEAD
 systemd (229-4ubuntu11bb1) UNRELEASED; urgency=medium
 
