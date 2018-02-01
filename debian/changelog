@@ -1,3 +1,91 @@
+systemd (229-4ubuntu21.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: remote DoS in resolved (LP: #1725351)
+    - debian/patches/CVE-2017-15908.patch: fix loop on packets with pseudo
+      dns types in src/resolve/resolved-dns-packet.c.
+    - CVE-2017-15908
+  * SECURITY UPDATE: access to automounted volumes can lock up
+    (LP: #1709649)
+    - debian/patches/CVE-2018-1049.patch: ack automount requests even when
+      already mounted in src/core/automount.c.
+    - CVE-2018-1049
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 01 Feb 2018 07:42:30 -0500
+
+systemd (229-4ubuntu21) xenial; urgency=medium
+
+  * networkd: do not uncoditionally apply NOARP.
+  * networkd: fix size of MTUBytes so that it does not overwrites ARP.
+  * Fixes regression-updates LP: #1727301
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 27 Oct 2017 09:21:18 +0100
+
+systemd (229-4ubuntu20) xenial; urgency=medium
+
+  * resolved: recognize DNS names with more than one trailing dot as invalid
+    (LP: #1600000)
+  * Ignore failures to set Nice priority on services in containers.
+    (LP: #1709536)
+  * networkd: accept `:' in ifnames in systemd/networkd. (LP: #1714933)
+  * initramfs-tools: trigger udevadm add actions with subsystems first.
+    (LP: #1713536)
+  * networkd: Add support to set STP value on a bridge. (LP: #1665088)
+  * networkd: add support for AgeingTImeSec, Priority and DefaultPVID settings.
+    (LP: #1715131)
+    - Drop cherrypick of uint16 config parser, superseeded by above commit.
+  * networkd: add support to set ActiveSlave and PrimarySlave. (LP: #1709135)
+    - networkd: add support to configure ARP, depedency of Primary/ActiveSlave.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 05 Sep 2017 14:01:51 +0100
+
+systemd (229-4ubuntu19) xenial; urgency=medium
+
+  * debian/extra/units/systemd-resolved.service.d/resolvconf.conf: partially
+    revert, by removing ExecStart|StopPost lines, as these are not needed on
+    xenial and generate warnings in the journal. (LP: #1704677)
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 17 Jul 2017 17:00:42 +0100
+
+systemd (229-4ubuntu18) xenial; urgency=medium
+
+  * debian/extra/units/systemd-resolved.service.d/resolvconf.conf: if resolved
+    is going to be started, make sure this blocks network-online.target.
+    (LP: #1673860)
+  * networkd: cherry-pick support for setting bridge port's priority
+    (LP: #1668347)
+  * Cherrypick upstream commit to enable system use kernel maximum limit for
+    RLIMIT_NOFILE isntead of hard-coded (low) limit of 65536. (LP: #1686361)
+  * Cherrypick upstream patch for platform predictable interface names.
+    (LP: #1686784)
+  * resolved: fix null pointer dereference crash (LP: #1621396)
+  * Cherrypick core/timer downgrade message about random time addition
+    (LP: #1692136)
+  * SECURITY UPDATE: Out-of-bounds write in systemd-resolved (LP: #1695546)
+    - CVE-2017-9445
+  * Cherry-pick subset of patches to introduce infinity value in logind.conf
+    for UserTasksMax (LP: #1651518)
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 05 Jul 2017 13:45:48 +0100
+
+systemd (229-4ubuntu17) xenial; urgency=medium
+
+  * Make systemd-networkd-resolvconf-update.{service,path} run earlier
+    to ensure DNS is configured prior to reaching network-online.target.
+    (LP: #1649931)
+
+ -- Ryan Harper <ryan.harper@canonical.com>  Thu, 02 Feb 2017 15:41:48 -0600
+
+systemd (229-4ubuntu16) xenial; urgency=medium
+
+  * d/p/0001-libudev-util-change-util_replace_whitespace-to-retur.patch,
+    d/p/0002-udev-event-add-replace_whitespace-param-to-udev_even.patch,
+    d/p/0003-udev-rules-perform-whitespace-replacement-for-symlin.patch:
+    Cherry-pick upstream fixes from Dan Streetman <ddstreet@ieee.org> to
+    fix by-id symlinks for devices whose IDs contain whitespace.
+    LP: #1647485.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 18 Jan 2017 13:37:19 -0800
+
 systemd (229-4ubuntu13) xenial; urgency=medium
 
   [ Martin Pitt ]
