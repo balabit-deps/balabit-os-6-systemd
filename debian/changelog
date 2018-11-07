@@ -1,3 +1,9 @@
+systemd (229-4ubuntu21.6bb1) bionic; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Wed, 07 Nov 2018 09:24:03 +0100
+
 systemd (229-4ubuntu21.6) xenial-security; urgency=medium
 
   * SECURITY UPDATE: buffer overflow in dhcp6 client
