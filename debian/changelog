@@ -1,3 +1,9 @@
+systemd (229-4ubuntu21.15bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 12 Jan 2019 04:24:12 +0100
+
 systemd (229-4ubuntu21.15) xenial-security; urgency=medium
 
   * SECURITY UPDATE: memory corruption in journald via attacker controlled alloca
