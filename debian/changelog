@@ -1,3 +1,9 @@
+systemd (229-4ubuntu21.16bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 23 Feb 2019 04:23:33 +0100
+
 systemd (229-4ubuntu21.16) xenial-security; urgency=medium
 
   * SECURITY UPDATE: denial of service via crafted dbus message
