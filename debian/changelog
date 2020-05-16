@@ -1,3 +1,9 @@
+systemd (229-4ubuntu21.28bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sat, 16 May 2020 04:28:11 +0200
+
 systemd (229-4ubuntu21.28) xenial; urgency=medium
 
   * d/t/logind: skip if nonexistent /sys/power/state (LP: #1862657)
